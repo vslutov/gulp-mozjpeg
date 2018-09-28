@@ -1,8 +1,4 @@
-# @vslutov/gulp-mozjpeg
-
-convert jpg, png to jpg with mozjpeg
-
-# imagemin-mozjpeg [![Build Status](https://travis-ci.org/vslutov/gulp-mozjpeg.svg?branch=master)](https://travis-ci.org/vslutov/gulp-mozjpeg)
+# @vslutov/gulp-mozjpeg [![Build Status](https://travis-ci.org/vslutov/gulp-mozjpeg.svg?branch=master)](https://travis-ci.org/vslutov/gulp-mozjpeg)
 
 > [Gulp](https://github.com/gulpjs/gulp) plugin for [mozjpeg](https://github.com/mozilla/mozjpeg)
 
