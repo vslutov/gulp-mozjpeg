@@ -2,7 +2,6 @@ import test from 'ava'
 import File from 'vinyl'
 import { stub } from 'sinon'
 import through from 'through2'
-import stream from 'stream'
 import pify from 'pify'
 import mozjpeg from 'mozjpeg'
 
@@ -14,19 +13,13 @@ const getFakeFile = (fileContent, data) => {
     path: './test/fixture/file.png',
     cwd: './test/',
     base: './test/fixture/',
-    contents: new Buffer.from(fileContent || '')
+    contents: Buffer.from(fileContent || '')
   })
   if (data != null) {
     result.data = data
   }
   return result
 }
-
-const getFakeFileReadStream = () =>
-  new File({
-    contents: new stream.Readable({ objectMode: true }).wrap(es.readArray(['Hello world'])),
-    path: './test/fixture/anotherFile.png'
-  })
 
 test.serial('should call execa', pify((t, done) => {
   stub(execa, 'stdout').resolves(Buffer.from('some'))
@@ -38,7 +31,6 @@ test.serial('should call execa', pify((t, done) => {
   const outputStream = inputStream.pipe(gulpMozjpeg())
   inputStream.end(inputFile)
 
-
   let fileCount = 0
 
   outputStream.on('data', outputFile => {
@@ -49,7 +41,7 @@ test.serial('should call execa', pify((t, done) => {
     t.is(outputFile.path, 'test/fixture/file.jpg')
     t.is(outputFile.relative, 'file.jpg')
     t.is(outputFile.contents.toString('utf8'), 'some')
-    ++ fileCount
+    ++fileCount
   })
 
   outputStream.on('end', () => {

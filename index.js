@@ -7,12 +7,6 @@ const replaceExt = require('replace-ext')
 // Consts
 const PLUGIN_NAME = 'gulp-mozjpeg'
 
-function prefixStream(prefixText) {
-  const stream = through()
-  stream.write(prefixText)
-  return stream
-}
-
 module.exports = (options = {}) => {
   options = Object.assign({
     trellis: true,
@@ -96,7 +90,7 @@ module.exports = (options = {}) => {
     }
 
     if (file.extname !== '.png' && file.extname !== 'jpg') {
-      throw new PluginError('gulp-mozjpeg', 'Only .jpg and .png are allowed')
+      throw new PluginError(PLUGIN_NAME, 'Only .jpg and .png are allowed')
     }
 
     if (file.isBuffer() || file.isStream()) {
