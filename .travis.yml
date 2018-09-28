@@ -7,7 +7,7 @@ node_js:
 deploy:
   provider: npm
   email: "vslutov@yandex.ru"
-  ap_key: "${API_KEY}"
+  api_key: "${API_KEY}"
   skip_cleanup: true
   on:
     tags: true
