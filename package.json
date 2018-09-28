@@ -5,10 +5,18 @@
   "main": "index.js",
   "repository": "https://github.com/vslutov/gulp-mozjpeg",
   "author": "vs@lutov.net",
-  "license": "AGPLv3+",
+  "license": "AGPL-3.0-or-later",
   "dependencies": {
     "map-stream": "^0.0.7",
-    "mozjpeg": "^6.0.0",
     "vinyl": "^2.2.0"
+  },
+  "devDependencies": {
+    "standard": "^12.0.1"
+  },
+  "peerDependecies": {
+    "mozjpeg": ">6.0.0"
+  },
+  "scripts": {
+    "test": "standard"
   }
 }
