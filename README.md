@@ -1,0 +1,1 @@
+# @vslutov/gulp-mozjpeg

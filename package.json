@@ -1,0 +1,14 @@
+{
+  "name": "@vslutov/gulp-mozjpeg",
+  "version": "0.0.1",
+  "description": "convert jpg, png to jpg with mozjpeg",
+  "main": "index.js",
+  "repository": "https://github.com/vslutov/gulp-mozjpeg",
+  "author": "vs@lutov.net",
+  "license": "AGPLv3+",
+  "dependencies": {
+    "map-stream": "^0.0.7",
+    "mozjpeg": "^6.0.0",
+    "vinyl": "^2.2.0"
+  }
+}
