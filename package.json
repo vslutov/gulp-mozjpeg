@@ -7,20 +7,31 @@
   "author": "vslutov@yandex.ru",
   "license": "AGPL-3.0-or-later",
   "dependencies": {
-    "map-stream": "^0.0.7",
-    "vinyl": "^2.2.0"
+    "execa": "^1.0.0",
+    "plugin-error": "^1.0.1",
+    "replace-ext": "^1.0.0",
+    "through2": "^2.0.3"
   },
   "devDependencies": {
-    "standard": "^12.0.1"
-  },
-  "peerDependecies": {
-    "mozjpeg": ">6.0.0"
+    "ava": "^0.25.0",
+    "mozjpeg": "^6.0.0",
+    "pify": "^4.0.0",
+    "sinon": "^6.3.4",
+    "standard": "^12.0.1",
+    "vinyl": "^2.2.0"
   },
   "scripts": {
-    "test": "standard"
+    "test": "standard && ava"
   },
-  "keywords": ["mozjpeg", "gulp", "gulpplugin"],
+  "keywords": [
+    "mozjpeg",
+    "gulp",
+    "gulpplugin"
+  ],
   "publishConfig": {
     "access": "public"
+  },
+  "peerDependencies": {
+    "mozjpeg": ">=6.0.0"
   }
 }
