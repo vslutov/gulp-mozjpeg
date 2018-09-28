@@ -19,5 +19,8 @@
   "scripts": {
     "test": "standard"
   },
-  "keywords": ["mozjpeg", "gulp", "gulpplugin"]
+  "keywords": ["mozjpeg", "gulp", "gulpplugin"],
+  "publishConfig": {
+    "access": "public"
+  }
 }
