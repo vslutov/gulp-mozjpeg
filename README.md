@@ -2,6 +2,7 @@
 
 > [Gulp](https://github.com/gulpjs/gulp) plugin for [mozjpeg](https://github.com/mozilla/mozjpeg)
 
+Key difference with the imagemin: the ability to convert png to jpg files as well as jpg.
 
 ## Install
 
