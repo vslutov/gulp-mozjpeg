@@ -13,5 +13,6 @@ jobs:
       deploy:
         provider: npm
         api_key: $NPM_API_KEY
+        email: vslutov@yandex.ru
         on:
           tags: true
