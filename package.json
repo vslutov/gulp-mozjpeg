@@ -1,6 +1,6 @@
 {
   "name": "@vslutov/gulp-mozjpeg",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Gulp plugin for mozjpeg ",
   "main": "index.js",
   "repository": "https://github.com/vslutov/gulp-mozjpeg",
